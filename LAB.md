@@ -22,7 +22,7 @@ _Possible_ API choices:
 
 API Requirements:
 
-* Has to support CORS (search from AJAX call) verify [here](test-cors.org) (but sometimes this site is flakey, try a 
+* Has to support CORS (search from AJAX call) verify [here](https://test-cors.org) (but sometimes this site is flakey, try a 
 call from then browser console or your Vue app.)
 * Supports searching or some type of parameter
 * You most likely will need to sign up for an API "key"
