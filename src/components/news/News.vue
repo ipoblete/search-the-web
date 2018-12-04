@@ -1,8 +1,16 @@
 <template>
   <section>
     <h2>News</h2>
-    <Article></Article>
     {{news}}
+    
+    <div>
+      <ul v-if="news">
+        <Article v-for="(article, i) in news"
+          :key="i"
+          :article="article"
+        />
+      </ul>
+    </div>
   </section>
 </template>
 
@@ -20,10 +28,10 @@ export default {
     Article
   },
   created() {
-    this.searchArticle();
+    this.searchNews();
   },
   methods: {
-    searchArticle() {
+    searchNews() {
       api.getNews()
         .then(response => {
           this.news = response.articles;

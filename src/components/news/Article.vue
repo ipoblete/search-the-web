@@ -1,7 +1,7 @@
 <template>
-  <div>
-    {{article.author}}
-  </div>
+  <li>
+    {{article.name}}
+  </li>
 </template>
 
 <script>
