@@ -1,6 +1,8 @@
 <template>
   <li>
-    {{article.name}}
+    <RouterLink :to="`/news/${article.id}`">
+      {{article.name}} by {{article.author}}
+    </RouterLink>
   </li>
 </template>
 

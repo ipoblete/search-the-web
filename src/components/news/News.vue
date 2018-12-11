@@ -1,7 +1,7 @@
 <template>
   <section>
     <h2>News</h2>
-    {{news}}
+    <!-- {{news}} -->
     
     <div>
       <ul v-if="news">
