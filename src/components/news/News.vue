@@ -1,9 +1,11 @@
 <template>
   <section>
     <h2>News</h2>
-    <!-- {{news}} -->
+
     <ArticleSearch :onSearch="handleSearch" :search="search"/>
+    
     <Loader :loading="loading"/>
+    
     <pre :show="error" class="error">
       {{error}}
     </pre>
@@ -27,11 +29,12 @@ import Loader from './Loader';
 
 export default {
   data() {
+    let search = this.$route.query.search;
     return {
       news: null,
       loading: false,
       error: null,
-      search: decodeURIComponent(this.$route.query.search)
+      search: search ? decodeURIComponent(search) : ''
     };
   },
   components: {
@@ -60,7 +63,7 @@ export default {
 
       api.getNews(this.search)
         .then(response => {
-          this.news = response.Search;
+          this.news = response.articles;
           this.loading = false;
         })
         .catch(err => {

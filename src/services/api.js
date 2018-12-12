@@ -3,7 +3,7 @@ export default {
     if(searchTerm.startsWith('Trump')) {
       return Promise.reject(new Error('Why?!'));
     }
-    return fetch(`https://newsapi.org/v2/top-headlines?country=${encodeURIComponent(searchTerm)}&apiKey=359f53afc95c481e94fb13829bdbeb2f`)
+    return fetch(`https://newsapi.org/v2/top-headlines?country=${encodeURIComponent(searchTerm)}&apiKey=3791030249b74eaba042f0bb0d2f984c`)
       .then(response => response.json());
   }
 };
